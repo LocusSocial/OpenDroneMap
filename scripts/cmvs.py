@@ -62,5 +62,5 @@ class ODMCmvsCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'CMVS')
 
-        log.ODM_INFO('Running ODM CMVS Cell - Finished')
+        log.ODM_INFO('Running ODM CMVS Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'cmvs' else ecto.QUIT

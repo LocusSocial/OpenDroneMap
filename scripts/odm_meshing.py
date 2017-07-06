@@ -112,5 +112,5 @@ class ODMeshingCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'Meshing')
 
-        log.ODM_INFO('Running ODM Meshing Cell - Finished')
+        log.ODM_INFO('Running ODM Meshing Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'odm_meshing' else ecto.QUIT

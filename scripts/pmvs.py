@@ -78,5 +78,5 @@ class ODMPmvsCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'PMVS')
 
-        log.ODM_INFO('Running ODM PMVS Cell - Finished')
+        log.ODM_INFO('Running ODM PMVS Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'pmvs' else ecto.QUIT

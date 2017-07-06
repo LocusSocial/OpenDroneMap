@@ -154,5 +154,5 @@ class ODMResizeCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'Resizing')
 
-        log.ODM_INFO('Running ODM Resize Cell - Finished')
+        log.ODM_INFO('Running ODM Resize Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'resize' else ecto.QUIT

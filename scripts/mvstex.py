@@ -129,5 +129,5 @@ class ODMMvsTexCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'Texturing')
 
-        log.ODM_INFO('Running ODM Texturing Cell - Finished')
+        log.ODM_INFO('Running ODM Texturing Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'odm_texturing' else ecto.QUIT

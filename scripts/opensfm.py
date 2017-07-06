@@ -151,5 +151,5 @@ class ODMOpenSfMCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'OpenSfM')
 
-        log.ODM_INFO('Running ODM OpenSfM Cell - Finished')
+        log.ODM_INFO('Running ODM OpenSfM Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'opensfm' else ecto.QUIT

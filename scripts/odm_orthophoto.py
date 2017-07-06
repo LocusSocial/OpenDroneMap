@@ -151,5 +151,5 @@ class ODMOrthoPhotoCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'Orthophoto')
 
-        log.ODM_INFO('Running ODM OrthoPhoto Cell - Finished')
+        log.ODM_INFO('Running ODM OrthoPhoto Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'odm_orthophoto' else ecto.QUIT

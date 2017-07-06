@@ -212,5 +212,5 @@ class ODMGeoreferencingCell(ecto.Cell):
         if args.time:
             system.benchmark(start_time, tree.benchmarking, 'Georeferencing')
 
-        log.ODM_INFO('Running ODM Georeferencing Cell - Finished')
+        log.ODM_INFO('Running ODM Georeferencing Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'odm_georeferencing' else ecto.QUIT

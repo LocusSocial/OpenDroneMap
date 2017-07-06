@@ -82,5 +82,5 @@ class ODMLoadDatasetCell(ecto.Cell):
         # append photos to cell output
         outputs.photos = photos
 
-        log.ODM_INFO('Running ODM Load Dataset Cell - Finished')
+        log.ODM_INFO('Running ODM Load Dataset Cell - %s' % system.now())
         return ecto.OK

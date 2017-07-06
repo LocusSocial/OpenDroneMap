@@ -107,5 +107,5 @@ class ODMSlamCell(ecto.Cell):
             log.ODM_WARNING('Found a valid CMVS file in: {}'.format(
                 tree.pmvs_visdat))
 
-        log.ODM_INFO('Running OMD Slam Cell - Finished')
+        log.ODM_INFO('Running OMD Slam Cell - %s' % system.now())
         return ecto.OK if args.end_with != 'odm_slam' else ecto.QUIT
