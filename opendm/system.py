@@ -19,7 +19,7 @@ def get_ccd_widths():
 
 def run(cmd):
     """Run a system command"""
-    log.ODM_DEBUG('running %s' % cmd)
+    log.ODM_DEBUG('running %s - timestamp: %s' % (cmd, now()))
     retcode = subprocess.call(cmd, shell=True)
 
     if retcode < 0:
