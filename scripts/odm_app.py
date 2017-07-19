@@ -59,7 +59,7 @@ class ODMApp(ecto.BlackBox):
                                            #
                                            # akaze_omax=p.args.akaze_omax,
                                            # akaze_dthreshold=p.args.akaze_dthreshold,
-                                           # akaze_descriptor=p.args.akaze_descriptor,
+                                           akaze_descriptor=p.args.akaze_descriptor,
                                            # akaze_descriptor_size=p.args.akaze_descriptor_size,
                                            # akaze_descriptor_channels=p.args.akaze_descriptor_channels,
                                            #

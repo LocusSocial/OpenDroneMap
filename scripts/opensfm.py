@@ -27,7 +27,7 @@ class ODMOpenSfMCell(ecto.Cell):
         #
         # params.declare("akaze_omax", "The application arguments.", 4)
         # params.declare("akaze_dthreshold", "The application arguments.", 0.001)
-        # params.declare("akaze_descriptor", "The application arguments.", "MSURF")
+        params.declare("akaze_descriptor", "The application arguments.", "MSURF")
         # params.declare("akaze_descriptor_size", "The application arguments.", 0)
         # params.declare("akaze_descriptor_channels", "The application arguments.", 3)
         #
@@ -107,7 +107,7 @@ class ODMOpenSfMCell(ecto.Cell):
                 #
                 # "akaze_omax: %s" % self.params.akaze_omax,
                 # "akaze_dthreshold: %s" % self.params.akaze_dthreshold,
-                # "akaze_descriptor: %s" % self.params.akaze_descriptor,
+                "akaze_descriptor: %s" % self.params.akaze_descriptor,
                 # "akaze_descriptor_size: %s" % self.params.akaze_descriptor_size,
                 # "akaze_descriptor_channels: %s" % self.params.akaze_descriptor_channels,
                 #

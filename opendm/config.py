@@ -447,6 +447,11 @@ def config():
                         default='FLANN',
                         choices=['FLANN', 'BRUTEFORCE'])
 
+    parser.add_argument('--akaze-descriptor',
+                        metavar='<string>',
+                        default='MSURF',
+                        choices=['SURF', 'MSURF', 'MLDB'])
+
     args = parser.parse_args()
 
     # check that the project path setting has been set properly
