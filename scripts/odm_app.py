@@ -49,27 +49,27 @@ class ODMApp(ecto.BlackBox):
                                            matching_gps_distance=p.args.matcher_distance,
 
                                            feature_type=p.args.feature_type,
-
-                                           surf_hessian_threshold=p.args.surf_hessian_threshold,
-                                           surf_n_octaves=p.args.surf_n_octaves,
-                                           surf_n_octavelayers=p.args.surf_n_octavelayers,
-
-                                           hahog_peak_threshold=p.args.hahog_peak_threshold,
-                                           hahog_edge_threshold=p.args.hahog_edge_threshold,
-
-                                           akaze_omax=p.args.akaze_omax,
-                                           akaze_dthreshold=p.args.akaze_dthreshold,
-                                           akaze_descriptor=p.args.akaze_descriptor,
-                                           akaze_descriptor_size=p.args.akaze_descriptor_size,
-                                           akaze_descriptor_channels=p.args.akaze_descriptor_channels,
-
-                                           lowes_ratio=p.args.lowes_ratio,
-                                           preemptive_lowes_ratio=p.args.preemptive_lowes_ratio,
-                                           matcher_type=p.args.matcher_type,
-
-                                           flann_branching=p.args.flann_branching,
-                                           flann_iterations=p.args.flann_iterations,
-                                           flann_checks=p.args.flann_checks
+                                           #
+                                           # surf_hessian_threshold=p.args.surf_hessian_threshold,
+                                           # surf_n_octaves=p.args.surf_n_octaves,
+                                           # surf_n_octavelayers=p.args.surf_n_octavelayers,
+                                           #
+                                           # hahog_peak_threshold=p.args.hahog_peak_threshold,
+                                           # hahog_edge_threshold=p.args.hahog_edge_threshold,
+                                           #
+                                           # akaze_omax=p.args.akaze_omax,
+                                           # akaze_dthreshold=p.args.akaze_dthreshold,
+                                           # akaze_descriptor=p.args.akaze_descriptor,
+                                           # akaze_descriptor_size=p.args.akaze_descriptor_size,
+                                           # akaze_descriptor_channels=p.args.akaze_descriptor_channels,
+                                           #
+                                           # lowes_ratio=p.args.lowes_ratio,
+                                           # preemptive_lowes_ratio=p.args.preemptive_lowes_ratio,
+                                           matcher_type=p.args.matcher_type
+                                           #
+                                           # flann_branching=p.args.flann_branching,
+                                           # flann_iterations=p.args.flann_iterations,
+                                           # flann_checks=p.args.flann_checks
                                            ),
                  'slam': ODMSlamCell(),
                  'cmvs': ODMCmvsCell(max_images=p.args.cmvs_maxImages),

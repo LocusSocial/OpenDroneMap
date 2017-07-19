@@ -18,28 +18,28 @@ class ODMOpenSfMCell(ecto.Cell):
         # Features
         params.declare("feature_type", "The application arguments.", "HAHOG")
 
-        params.declare("surf_hessian_threshold", "The application arguments.", 3000)
-        params.declare("surf_n_octaves", "The application arguments.", 4)
-        params.declare("surf_n_octavelayers", "The application arguments.", 2)
-
-        params.declare("hahog_peak_threshold", "The application arguments.", 0.00001)
-        params.declare("hahog_edge_threshold", "The application arguments.", 10)
-
-        params.declare("akaze_omax", "The application arguments.", 4)
-        params.declare("akaze_dthreshold", "The application arguments.", 0.001)
-        params.declare("akaze_descriptor", "The application arguments.", "MSURF")
-        params.declare("akaze_descriptor_size", "The application arguments.", 0)
-        params.declare("akaze_descriptor_channels", "The application arguments.", 3)
-
-        # Matching
-        params.declare("lowes_ratio", "The application arguments.", 0.8)
-        params.declare("preemptive_lowes_ratio", "The application arguments.", 0.6)
+        # params.declare("surf_hessian_threshold", "The application arguments.", 3000)
+        # params.declare("surf_n_octaves", "The application arguments.", 4)
+        # params.declare("surf_n_octavelayers", "The application arguments.", 2)
+        #
+        # params.declare("hahog_peak_threshold", "The application arguments.", 0.00001)
+        # params.declare("hahog_edge_threshold", "The application arguments.", 10)
+        #
+        # params.declare("akaze_omax", "The application arguments.", 4)
+        # params.declare("akaze_dthreshold", "The application arguments.", 0.001)
+        # params.declare("akaze_descriptor", "The application arguments.", "MSURF")
+        # params.declare("akaze_descriptor_size", "The application arguments.", 0)
+        # params.declare("akaze_descriptor_channels", "The application arguments.", 3)
+        #
+        # # Matching
+        # params.declare("lowes_ratio", "The application arguments.", 0.8)
+        # params.declare("preemptive_lowes_ratio", "The application arguments.", 0.6)
         params.declare("matcher_type", "The application arguments.", "FLANN")
-
-        # Params for FLANN matching
-        params.declare("flann_branching", "The application arguments.", 16)
-        params.declare("flann_iterations", "The application arguments.", 10)
-        params.declare("flann_checks", "The application arguments.", 200)
+        #
+        # # Params for FLANN matching
+        # params.declare("flann_branching", "The application arguments.", 16)
+        # params.declare("flann_iterations", "The application arguments.", 10)
+        # params.declare("flann_checks", "The application arguments.", 200)
 
     def declare_io(self, params, inputs, outputs):
         inputs.declare("tree", "Struct with paths", [])
@@ -98,27 +98,27 @@ class ODMOpenSfMCell(ecto.Cell):
                 # Features
                 "feature_type: %s" % self.params.feature_type,
 
-                "surf_hessian_threshold: %s" % self.params.surf_hessian_threshold,
-                "surf_n_octaves: %s" % self.params.surf_n_octaves,
-                "surf_n_octavelayers: %s" % self.params.surf_n_octavelayers,
-
-                "hahog_peak_threshold: %s" % self.params.hahog_peak_threshold,
-                "hahog_edge_threshold: %s" % self.params.hahog_edge_threshold,
-
-                "akaze_omax: %s" % self.params.akaze_omax,
-                "akaze_dthreshold: %s" % self.params.akaze_dthreshold,
-                "akaze_descriptor: %s" % self.params.akaze_descriptor,
-                "akaze_descriptor_size: %s" % self.params.akaze_descriptor_size,
-                "akaze_descriptor_channels: %s" % self.params.akaze_descriptor_channels,
-
-                # Matching
-                "lowes_ratio: %s" % self.params.lowes_ratio,
-                "preemptive_lowes_ratio: %s" % self.params.preemptive_lowes_ratio,
+                # "surf_hessian_threshold: %s" % self.params.surf_hessian_threshold,
+                # "surf_n_octaves: %s" % self.params.surf_n_octaves,
+                # "surf_n_octavelayers: %s" % self.params.surf_n_octavelayers,
+                #
+                # "hahog_peak_threshold: %s" % self.params.hahog_peak_threshold,
+                # "hahog_edge_threshold: %s" % self.params.hahog_edge_threshold,
+                #
+                # "akaze_omax: %s" % self.params.akaze_omax,
+                # "akaze_dthreshold: %s" % self.params.akaze_dthreshold,
+                # "akaze_descriptor: %s" % self.params.akaze_descriptor,
+                # "akaze_descriptor_size: %s" % self.params.akaze_descriptor_size,
+                # "akaze_descriptor_channels: %s" % self.params.akaze_descriptor_channels,
+                #
+                # # Matching
+                # "lowes_ratio: %s" % self.params.lowes_ratio,
+                # "preemptive_lowes_ratio: %s" % self.params.preemptive_lowes_ratio,
                 "matcher_type: %s" % self.params.matcher_type,
-
-                "flann_branching: %s" % self.params.flann_branching,
-                "flann_iterations: %s" % self.params.flann_iterations,
-                "flann_checks: %s" % self.params.flann_checks,
+                #
+                # "flann_branching: %s" % self.params.flann_branching,
+                # "flann_iterations: %s" % self.params.flann_iterations,
+                # "flann_checks: %s" % self.params.flann_checks,
             ]
 
             if args.matcher_distance > 0:

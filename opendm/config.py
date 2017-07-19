@@ -436,6 +436,17 @@ def config():
                         version='OpenDroneMap {0}'.format(__version__),
                         help='Displays version number and exits. ')
 
+    # Extra params added for opensfm
+    parser.add_argument('--feature-type',
+                        metavar='<string>',
+                        default='HAHOG',
+                        choices=['HAHOG', 'SIFT', 'SURF', 'AKAZE'])
+
+    parser.add_argument('--matcher-type',
+                        metavar='<string>',
+                        default='FLANN',
+                        choices=['FLANN', 'BRUTEFORCE'])
+
     args = parser.parse_args()
 
     # check that the project path setting has been set properly
