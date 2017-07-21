@@ -452,6 +452,11 @@ def config():
                         default='MSURF',
                         choices=['SURF', 'MSURF', 'MLDB'])
 
+    parser.add_argument('--ceres-loss-function',
+                        metavar='<string>',
+                        default='SoftLOneLoss',
+                        choices=['TrivialLoss', 'HuberLoss', 'SoftLOneLoss', 'CauchyLoss', 'ArctanLoss', 'TolerantLoss'])
+
     args = parser.parse_args()
 
     # check that the project path setting has been set properly

@@ -41,6 +41,8 @@ class ODMOpenSfMCell(ecto.Cell):
         # params.declare("flann_iterations", "The application arguments.", 10)
         # params.declare("flann_checks", "The application arguments.", 200)
 
+        params.declare("ceres_loss_function", "The application arguments.", "SoftLOneLoss")
+
     def declare_io(self, params, inputs, outputs):
         inputs.declare("tree", "Struct with paths", [])
         inputs.declare("args", "The application arguments.", {})
@@ -119,6 +121,8 @@ class ODMOpenSfMCell(ecto.Cell):
                 # "flann_branching: %s" % self.params.flann_branching,
                 # "flann_iterations: %s" % self.params.flann_iterations,
                 # "flann_checks: %s" % self.params.flann_checks,
+
+                "ceres_loss_function: %s" % self.params.ceres_loss_function,
             ]
 
             if args.matcher_distance > 0:

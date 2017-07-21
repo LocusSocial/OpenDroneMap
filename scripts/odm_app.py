@@ -65,11 +65,13 @@ class ODMApp(ecto.BlackBox):
                                            #
                                            # lowes_ratio=p.args.lowes_ratio,
                                            # preemptive_lowes_ratio=p.args.preemptive_lowes_ratio,
-                                           matcher_type=p.args.matcher_type
+                                           matcher_type=p.args.matcher_type,
                                            #
                                            # flann_branching=p.args.flann_branching,
                                            # flann_iterations=p.args.flann_iterations,
                                            # flann_checks=p.args.flann_checks
+
+                                           ceres_loss_function=p.args.ceres_loss_function,
                                            ),
                  'slam': ODMSlamCell(),
                  'cmvs': ODMCmvsCell(max_images=p.args.cmvs_maxImages),
